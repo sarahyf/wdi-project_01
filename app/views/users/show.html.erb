@@ -1,0 +1,7 @@
+<%= @d = "" %>
+<%= month_calendar do |date| %>
+  <%= link_to date.day, new_event_path %>
+<% end %>
+
+<h3><%= link_to "Add Event", new_event_path %></h3>
+<h3><%= link_to "Add Task", new_task_path %></h3>
