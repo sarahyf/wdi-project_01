@@ -14,3 +14,10 @@
  *= require_self
  *= require simple_calendar
  */
+
+
+ .date {
+     height: 500px;
+     background-color: palegoldenrod;
+
+ }

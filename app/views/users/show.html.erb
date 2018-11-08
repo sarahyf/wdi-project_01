@@ -1,7 +1,17 @@
-<%= @d = "" %>
-<%= month_calendar do |date| %>
-  <%= link_to date.day, new_event_path %>
+<%= month_calendar events: @user.events, tasks: @user.tasks do |date, events, tasks| %>
+
+  <%= link_to date.day, "", class: "date_selected", data: {"js-date-link" => date} %>
+
+
+  <% events.each do |event| %>
+    <div>
+      <%= event.event_title %>
+    </div>
+  <% end %>
+
 <% end %>
 
-<h3><%= link_to "Add Event", new_event_path %></h3>
-<h3><%= link_to "Add Task", new_task_path %></h3>
+
+ <%= link_to "Add Event", new_event_path %>
+ <%= link_to "Add Task", new_task_path %>
+

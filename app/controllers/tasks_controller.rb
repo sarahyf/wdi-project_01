@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
+    @tasks = Task.all
   end
 
   def show
@@ -29,6 +30,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:due_date, :task_title, :description)
+    params.require(:task).permit(:start_time, :task_title, :description)
   end
 end
