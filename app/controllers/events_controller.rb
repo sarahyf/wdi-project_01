@@ -23,8 +23,16 @@ class EventsController < ApplicationController
   end
 
   def update
-    event = current_user.events.update(event_params)
+    event = Event.find_by(id: params[:id])
+    event.update(event_params)
+    # event = current_user.events.update(event_params)
     redirect_to event_path(event)
+  end
+
+  def destroy
+    event = Event.find_by(id: params[:id])
+    current_user.events.destroy(event)
+    redirect_to events_path
   end
 
   private

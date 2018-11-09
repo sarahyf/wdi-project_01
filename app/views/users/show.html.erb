@@ -1,17 +1,28 @@
-<%= month_calendar events: @user.events, tasks: @user.tasks do |date, events, tasks| %>
+<p>Welcome <%= @user.name %></p>
 
-  <%= link_to date.day, "", class: "date_selected", data: {"js-date-link" => date} %>
+ <%= link_to "Add Event", new_event_path %>
 
+<%= month_calendar events: @user.events do |date, events| %>
 
+ <!-- <%= link_to date.day, "", class: "date_selected", data: {"js-date-link" => date}, remote: true %> -->
+<% val = false %>
+<% counter = 0 %>
   <% events.each do |event| %>
-    <div>
-      <%= event.event_title %>
-    </div>
-  <% end %>
+  <% val = true %>
+  <% counter += 1 %>
 
+  <% if counter == 1%>
+    <%= link_to date.day, events_path %>
+    <div>
+        <%= event.event_title %>
+    </div>
+    <% end %>
+  <% end %>
+  <% if val == false %>
+      <%=  link_to date.day %>
+      <% end %>
 <% end %>
 
 
- <%= link_to "Add Event", new_event_path %>
  <%= link_to "Add Task", new_task_path %>
 

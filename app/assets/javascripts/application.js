@@ -17,6 +17,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+var d = ""
+
 $(document).ready(function () {
     console.log("jQ Connected");
 
@@ -25,6 +27,8 @@ $(document).ready(function () {
         var $date = this.getAttribute("data-js-date-link");
         console.log($date);
         $showDate.text($date);
+        
+        d = $date;
 
         var $body = $("body");
         $body.append($showDate);
@@ -45,7 +49,12 @@ $(document).ready(function () {
         
         // $newA.setAttribute("href", "/views/events/show/");
 
-
+       
         event.preventDefault();
     });
 })
+
+
+function ddd() {
+    return d;
+}
