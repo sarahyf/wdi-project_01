@@ -1,28 +1,64 @@
 <p>Welcome <%= @user.name %></p>
 
- <%= link_to "Add Event", new_event_path %>
+<%= link_to "Add Event", new_event_path %>
+<%= link_to "All Events", events_path %>
+<%= link_to "Upcommig Event", events_path %>
 
 <%= month_calendar events: @user.events do |date, events| %>
 
- <!-- <%= link_to date.day, "", class: "date_selected", data: {"js-date-link" => date}, remote: true %> -->
 <% val = false %>
 <% counter = 0 %>
+<% array = [] %>
   <% events.each do |event| %>
-  <% val = true %>
-  <% counter += 1 %>
+    <% val = true %>
+    <% counter += 1 %>
 
-  <% if counter == 1%>
-    <%= link_to date.day, events_path %>
+   <% if counter == 1%>
+   <%= link_to date.day %>
+     <% end %>
+     
     <div>
         <%= event.event_title %>
     </div>
-    <% end %>
+    <% array.push(event) %>
   <% end %>
   <% if val == false %>
-      <%=  link_to date.day %>
-      <% end %>
+     <%= link_to date.day %>
+  <% end %>
 <% end %>
 
 
- <%= link_to "Add Task", new_task_path %>
+<h1>All Events</h1>
+
+<table>
+  <tbody>
+    <% @user.events.each do |event| %>
+      <tr>
+        <td><%= event.event_title %></td>
+        <td><%= link_to "Details", event %></td>
+        <td><%= link_to "Edit", edit_event_path(event) %></td>
+        <td><%= link_to "Destroy", event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<h1>Upcomming Events</h1>
+
+<table>
+  <tbody>
+    <% @user.events.each do |event| %>
+    <% if event.start_time > DateTime.now %>
+      <tr>
+        <td><%= event.event_title %></td>
+        <td><%= link_to "Details", event %></td>
+        <td><%= link_to "Edit", edit_event_path(event) %></td>
+        <td><%= link_to "Destroy", event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<br>
 

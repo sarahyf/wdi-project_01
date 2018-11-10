@@ -1,10 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
-  def index
-    @events = Event.all
-  end
-
   def show
     @event = Event.find_by(id: params[:id])
   end
@@ -32,7 +28,7 @@ class EventsController < ApplicationController
   def destroy
     event = Event.find_by(id: params[:id])
     current_user.events.destroy(event)
-    redirect_to events_path
+    redirect_to user_path(event.user_id)
   end
 
   private
