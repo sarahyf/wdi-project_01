@@ -2,17 +2,17 @@
 
 <div>
 <%= f.label :event_title %>
-<%= f.text_field :event_title %>
+<%= f.text_field :event_title, required: true %>
 </div>
 
 <div>
 <%= f.label :start_time %>
-<%= f.datetime_select :start_time %>
+<%= f.datetime_select :start_time, ampm: true, required: true  %>
 </div>
 
 <div>
 <%= f.label :end_time %>
-<%= f.datetime_select :end_time %>
+<%= f.datetime_select :end_time, ampm: true, required: true %>
 </div>
 
 <div>

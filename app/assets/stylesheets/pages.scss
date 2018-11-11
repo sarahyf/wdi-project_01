@@ -1,3 +1,44 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#login {
+    display: inline;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    font-size: 20px;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#signup {
+    display: inline;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    font-size: 20px;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}

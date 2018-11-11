@@ -1,6 +1,6 @@
-<h1>Welcome to the Daily Planner</h1>
+<h1>Welcome to the Planner</h1>
 
 <% if !user_signed_in? %>
-      <%= link_to "Log in", new_user_session_path %>
-      <%= link_to "Sign Up", new_user_registration_path %>
+     <p id="login"><%= link_to "Log in", new_user_session_path %></p>
+     <p id="signup"><%= link_to "Sign Up", new_user_registration_path %></p>
 <% end %>

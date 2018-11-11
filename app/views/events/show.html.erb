@@ -1,7 +1,7 @@
 <h3><%= @event.event_title %></h3>
-<p>Start Time: <%= @event.start_time %></p>
-<p>End Time: <%= @event.end_time %></p>
+<p>Start Time: <%= @event.start_time.strftime "%A, %B %d, %Y, %I:%M %P" %></p>
+<p>End Time: <%= @event.end_time.strftime "%A, %B %d, %Y, %I:%M %P" %></p>
 <p>Description: <%= @event.description %></p>
 
-<%= link_to 'Back', events_path %>
+<%# link_to 'Back', events_path %>
 
