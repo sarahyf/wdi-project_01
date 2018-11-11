@@ -14,3 +14,11 @@
  *= require_self
  *= require simple_calendar
  */
+
+body {
+    margin: 0%;
+}
+
+ #logout {
+     text-align: right;
+ }

@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @events = current_user.events
+    @events = current_user.events.order("start_time asc")
   end
 
   def show
@@ -32,7 +32,7 @@ class EventsController < ApplicationController
   def destroy
     event = Event.find_by(id: params[:id])
     current_user.events.destroy(event)
-    redirect_to user_path(event.user_id)
+    redirect_to events_path(current_user.events)
   end
 
   private

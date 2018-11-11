@@ -8,3 +8,4 @@
 
 User.destroy_all
 Event.destroy_all
+Task.destroy_all
