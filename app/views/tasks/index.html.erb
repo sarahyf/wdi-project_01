@@ -1,24 +1,18 @@
-<nav>
-    <ul>
-        <li><%= link_to "Home", users_path %></li>
-        <li><%= link_to "New Task", new_task_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-    </ul>
-</nav>
+<div id="tasks">
 
+<h1 id="date"><%= DateTime.now.to_date.strftime "%A, %B %d, %Y" %></h1>
 
-<h4><%= DateTime.now.to_date.strftime "%A, %B %d, %Y" %></h4>
-
-
-
-<h4>Incompleted Tasks</h4>
+<h2>Incompleted Tasks</h2>
 <div class="tasks" id="incomplete_tasks">
   <%= render @incomplete_tasks %>
+  <%= link_to "New Task", new_task_path, id: "new_link", remote: true  %>
 </div>
 
 <hr>
 
-<h4>Comlpeted Tasks</h4>
+<h2>Comlpeted Tasks</h2>
 <div class="tasks" id="complete_tasks">
   <%= render @complete_tasks %>
+</div>
+
 </div>

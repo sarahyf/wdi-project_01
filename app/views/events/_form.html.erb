@@ -1,5 +1,7 @@
 <%= form_for @event, remote: true do |f| %>
 
+<div class="form">
+
 <div>
 <%= f.label :event_title %>
 <%= f.text_field :event_title, required: true %>
@@ -22,6 +24,8 @@
 
 
 <%= f.submit %>
+
+</div>
 
 <% end %>
 

@@ -11,7 +11,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = current_user.tasks.create(task_params)
+    @task = current_user.tasks.create(task_params)
 
     respond_to do |f|
       f.html { redirect_to tasks_url }
@@ -30,8 +30,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task = Task.find_by(id: params[:id])
-    current_user.tasks.destroy(task)
+    @task = Task.find_by(id: params[:id])
+    current_user.tasks.destroy(@task)
 
     respond_to do |f|
       f.html { redirect_to tasks_path(current_user.tasks) }

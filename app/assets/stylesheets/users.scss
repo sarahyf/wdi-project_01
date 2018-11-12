@@ -2,33 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#event {
-    text-align: center;
-    font-size: 50px;
-    position: fixed;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
+#calendar {
+    margin-top: 50px;
+    font-size: 20px;    
 }
 
-
-#task {
-    text-align: center;
-    font-size: 50px;
-    position: fixed;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+#calendar a {
+    color: cornflowerblue;
 }
 
-// #events {
-//     background-color: wheat;
-//     height: 100px;
-//     text-align: center;
-//     font-size: 20px;
-//     margin: 0%;
-//     margin-bottom: 50px;
-// }
+#event_or_task {
+    text-align: center;
+    margin:  auto;
+    padding-top: 100px;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+#event, #event a {
+    text-align: center;
+    display: inline;
+    padding: 10px;
+    color: cornflowerblue;
+    // font-size: 50px;
+    // position: fixed;
+    // top: 50%;
+    // left: 40%;
+    // transform: translate(-50%, -50%);
+}
+
+#task, #task a {
+    text-align: center;
+    display: inline;
+    padding: 10px;
+    color: cornflowerblue;
+    // font-size: 50px;
+    // position: fixed;
+    // top: 50%;
+    // left: 60%;
+    // transform: translate(-50%, -50%);
+}
+
+#events h3, #events a {
+    font-size: 20px;
+    margin: 0%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: navy;
+}
 
 // #addEvent {
 //     display: inline;

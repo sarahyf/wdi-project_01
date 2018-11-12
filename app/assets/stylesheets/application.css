@@ -15,8 +15,37 @@
  *= require simple_calendar
  */
 
+body {
+    margin: 0%;
+}
 
+nav {
+    background-color: cornflowerblue;
+    height: 70px;
+    margin: 0px;
+    padding: 0px;
+}
 
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 20px;
+}
+
+nav a {
+    display:inline-block;
+    padding: 20px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
 
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
     position: relative;

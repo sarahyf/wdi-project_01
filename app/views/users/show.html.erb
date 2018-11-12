@@ -1,12 +1,9 @@
-<nav>
-    <ul>
-        <li><%= link_to "Home", users_path %></li>
-        <li><%= link_to "Add Event", new_event_path %></li>
-        <li><%= link_to "Show Events", events_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-    </ul>
-</nav>
+<div id="events">
+    <h3><%= link_to "New Event", new_event_path %></h3>
+    <h3><%= link_to "All Events", events_path %></h3>
+</div>
 
+<div id="calendar">
 <%= month_calendar events: @user.events do |date, events| %>
 
 <% val = false %>
@@ -29,6 +26,6 @@
      <%= link_to date.day %>
   <% end %>
 <% end %>
-
+</div>
 
 
