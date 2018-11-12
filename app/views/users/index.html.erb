@@ -1,0 +1,10 @@
+<nav>
+    <ul>
+        <li><%= link_to "Home", users_path %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    </ul>
+</nav>
+
+<h3 id="task"><%= link_to "Task", tasks_path %></h3>
+
+<h3 id="event"> <%= link_to "Event", events_path %></h3>

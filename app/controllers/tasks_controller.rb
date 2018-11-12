@@ -12,19 +12,31 @@ class TasksController < ApplicationController
 
   def create
     task = current_user.tasks.create(task_params)
-    redirect_to tasks_path
+
+    respond_to do |f|
+      f.html { redirect_to tasks_url }
+      f.js
+    end
   end
 
   def update
-    task = Task.find_by(id: params[:id])
-    task.update(task_params)
-    redirect_to tasks_path
+    @task = Task.find_by(id: params[:id])
+    @task.update(task_params)
+
+    respond_to do |f|
+      f.html { redirect_to tasks_path }
+      f.js { }
+    end
   end
 
   def destroy
     task = Task.find_by(id: params[:id])
     current_user.tasks.destroy(task)
-    redirect_to tasks_path(current_user.tasks)
+
+    respond_to do |f|
+      f.html { redirect_to tasks_path(current_user.tasks) }
+      f.js
+    end
   end
 
   private

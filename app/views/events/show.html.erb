@@ -1,7 +1,16 @@
+<nav>
+    <ul>
+        <li><%= link_to "Home", users_path %></li>
+        <li><%= link_to "Add Event", new_event_path %></li>
+        <li><%= link_to "Show Events", events_path %></li>
+        <li><%= link_to "Show Calendar", user_path(current_user) %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    </ul>
+</nav>
+
+
 <h3><%= @event.event_title %></h3>
 <p>Start Time: <%= @event.start_time.strftime "%A, %B %d, %Y, %I:%M %P" %></p>
 <p>End Time: <%= @event.end_time.strftime "%A, %B %d, %Y, %I:%M %P" %></p>
 <p>Description: <%= @event.description %></p>
-
-<%# link_to 'Back', events_path %>
 

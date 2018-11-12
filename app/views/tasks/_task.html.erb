@@ -1,6 +1,8 @@
-<%= form_for task do |f| %>
+<%= form_for task, remote: true do |f| %>
+  <% if task.created_at.to_date == DateTime.now.to_date %>
     <%= f.check_box :completed %>
     <%= f.submit "Update" %>
     <%= f.label :completed, task.task_title %>
-    <%= link_to "Delete", task, method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= link_to "Delete", task, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
+<% end %>
 <% end %>

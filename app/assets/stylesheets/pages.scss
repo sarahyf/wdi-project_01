@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-    background-color: white;
-}
+// body {
+//     background-color: white;
+// }
 
 #welcome {
     text-align: center;
@@ -12,7 +12,6 @@ body {
     position: fixed;
     top: 30%;
     left: 50%;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
 
@@ -23,7 +22,6 @@ body {
     top: 50%;
     left: 40%;
     font-size: 20px;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
 
@@ -34,11 +32,10 @@ body {
     top: 50%;
     left: 60%;
     font-size: 20px;
-    /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
 
-a {
-    text-decoration: none;
-    color: blue;
-}
+// a {
+//     text-decoration: none;
+//     color: blue;
+// }

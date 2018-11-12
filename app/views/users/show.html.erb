@@ -1,11 +1,11 @@
-<!-- <p>Welcome <%= @user.name %></p> -->
-<nav id="events">
-  <%# link_to "Add Task", new_task_path %>
-
-  <h3 id="addEvent"><%= link_to "Add Event", new_event_path %></h3>
-  <h3 id="showEvent"><%= link_to "Show Events", events_path %></h3>
+<nav>
+    <ul>
+        <li><%= link_to "Home", users_path %></li>
+        <li><%= link_to "Add Event", new_event_path %></li>
+        <li><%= link_to "Show Events", events_path %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    </ul>
 </nav>
-
 
 <%= month_calendar events: @user.events do |date, events| %>
 

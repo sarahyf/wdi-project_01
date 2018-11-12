@@ -1,2 +1,12 @@
+<nav>
+    <ul>
+        <li><%= link_to "Home", users_path %></li>
+        <li><%= link_to "Add Event", new_event_path %></li>
+        <li><%= link_to "Show Events", events_path %></li>
+        <li><%= link_to "Show Calendar", user_path(current_user) %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    </ul>
+</nav>
+
 <h2>New Event</h2>
 <%= render partial: "form" %>

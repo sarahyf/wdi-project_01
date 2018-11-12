@@ -15,10 +15,12 @@
  *= require simple_calendar
  */
 
-body {
-    margin: 0%;
-}
 
- #logout {
-     text-align: right;
- }
+
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: inherit;
+    width: auto;
+} 
