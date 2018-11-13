@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #tasks {
-    margin-left: 20px;
-    
+    margin-left: 20px; 
 }
 
 #date  {
@@ -12,25 +11,44 @@
     padding-bottom: 30px;
 }
 
-// #incompleted_tasks {
-//     color: red;
-// }
+#incompleted_tasks {
+    font-size: 25px;
+    color: red;
+}
 
-// #completed_tasks {
-//     color: green;
-// }
+#completed_tasks {
+    font-size: 25px;
+    color: green;
+}
 
 #new_link {
     color: navy;
 }
 
-.tasks {
-    font-size: 20px;
+#tasks h2{
+    font-size: 30px;
 }
+
+#tasks h3{
+    font-size: 25px;
+}
+
 
 #delete_task {
     color: darkslategrey;
     font-size: 15px;
 }
 
+#task_form input[type=text] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
 
+#task_form input[type=submit] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: #1A405F;
+    color: white;
+}

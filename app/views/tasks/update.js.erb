@@ -1,7 +1,11 @@
 <% if @task.completed %>
   $('#edit_task_<%= @task.id %>').appendTo('#complete_tasks');
   $('#edit_task_<%= @task.id %>').css("color", "green");
+  $('#edit_task_<%= @task.id %>').css("font-size", "25px");
+
 <% else %>
   $('#edit_task_<%= @task.id %>').appendTo('#incomplete_tasks');
   $('#edit_task_<%= @task.id %>').css("color", "red");
-<% end %>  
+  $('#edit_task_<%= @task.id %>').css("font-size", "25px");
+
+<% end %>

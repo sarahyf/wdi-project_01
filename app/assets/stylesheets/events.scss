@@ -16,12 +16,12 @@ h1 {
     padding-bottom: 20px;
 }
 
-.form input[type=text] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 250px;
-    margin-left: 20px;
-}
+// .form input[type=text] {
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+//     padding-right: 250px;
+//     margin-left: 20px;
+// }
 
 .form select {
     // padding-top: 10px;
@@ -32,6 +32,7 @@ h1 {
 }
 
 .form textarea{
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 50px;
     padding-right: 250px;
@@ -44,7 +45,7 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px;
-    background-color: cornflowerblue;
+    background-color: #E4535E;;
     color: white;
 }
 
@@ -63,19 +64,29 @@ h1 {
     margin-left: 20px;
 }
 
+#show h2{
+    font-size: 30px;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #show p{
     color: navy;
-    font-size: 20px;
-    padding-top: 20px;
-
+    font-size: 25px;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #show p strong{
     color: darkred;
-    font-size: 20px;
+    font-size: 25px;
 }
 
-#show p a{
+#show p a {
     color: black;
 }
 
@@ -89,8 +100,12 @@ h1 {
     flex-direction: column;
 }
 
+#all_events {
+    font-size: 25px;
+}
+
 #all_events table td {
-    font-size: 20px;
+    font-size: 25px;
     padding: 20px;
 
 }
@@ -107,4 +122,17 @@ h1 {
         // // border: 3px solid pink;
         // background-color: pink;
 } 
+
+#events {
+    text-align: center;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#events h3 a{
+    font-size: 25px;
+    color: #1A405F;
+}
 

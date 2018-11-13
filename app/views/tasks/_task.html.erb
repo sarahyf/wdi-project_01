@@ -1,3 +1,5 @@
+<% if task.completed == true %>
+<div id="completed_tasks">
 <%= form_for task, remote: true do |f| %>
   <% if task.created_at.to_date == DateTime.now.to_date %>
     <%= f.check_box :completed %>
@@ -7,4 +9,21 @@
 
     <%= link_to "delete", task, method: :delete, id:"delete_task" , remote: true %>
   <% end %>
+<% end %>
+</div>
+
+<% else task.completed == false %>
+<div id="incompleted_tasks">
+<%= form_for task, remote: true do |f| %>
+  <% if task.created_at.to_date == DateTime.now.to_date %>
+    <%= f.check_box :completed %>
+    <%= f.submit "Update" %>
+
+     <%= f.label :completed,task.task_title %>
+
+    <%= link_to "delete", task, method: :delete, id:"delete_task" , remote: true %>
+  <% end %>
+<% end %>
+</div>
+
 <% end %>
