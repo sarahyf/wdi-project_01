@@ -10,7 +10,7 @@
   </head>
 
   <body>
-
+      <h1 id="title">Daily Planner</h1>
       <% if user_signed_in? %>
       <nav>
       <ul>
@@ -22,7 +22,6 @@
        </nav>
         <% end %>
 
-    <%= yield %>
-            
+    <%= yield %>      
   </body>
 </html>

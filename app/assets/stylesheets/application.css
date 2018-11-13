@@ -17,14 +17,14 @@
 
 body {
     margin: 0%;
-
 }
 
 nav {
-    background-color: cornflowerblue;
+    background-color: navy;
     height: 70px;
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 
 nav ul{

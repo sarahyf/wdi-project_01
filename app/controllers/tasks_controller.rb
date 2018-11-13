@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
     respond_to do |f|
       f.html { redirect_to tasks_path }
-      f.js { }
+      f.js
     end
   end
 

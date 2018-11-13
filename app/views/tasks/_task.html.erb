@@ -3,14 +3,8 @@
     <%= f.check_box :completed %>
     <%= f.submit "Update" %>
 
-    <% if task.completed == false %>
-     <%= f.label :completed,task.task_title, id: "incompleted_tasks"%>
-     <% end %>
-
-    <% if task.completed == true %>
-      <%= f.label :completed,task.task_title, id: "completed_tasks"%>
-    <% end %>
+     <%= f.label :completed,task.task_title %>
 
     <%= link_to "delete", task, method: :delete, id:"delete_task" , remote: true %>
-<% end %>
+  <% end %>
 <% end %>
