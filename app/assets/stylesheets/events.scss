@@ -79,27 +79,32 @@ h1 {
     color: black;
 }
 
-
 #all_events {
     margin-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #all_events table td {
     font-size: 20px;
-    border-bottom: px solid black;
+    padding: 20px;
 
-} 
+}
 
 #all_events #event_title {
         padding-right: 100px;
         color: navy;
-        font-weight: bold;
 }
 
 #all_events a {
+        text-align: center;
         padding-right: 50px;
         color: darkred;
+        // // border: 3px solid pink;
+        // background-color: pink;
 } 
 
