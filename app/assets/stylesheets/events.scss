@@ -12,41 +12,95 @@ h1 {
     margin-left: 20px;
 }
 
-input[type=text] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 100px;
-    margin-left: 20px;
-    font-size: 20px;
+.form div {
+    padding-bottom: 20px;
 }
 
-select {
+.form input[type=text] {
     padding-top: 10px;
     padding-bottom: 10px;
-    // padding-right: 100px;
+    padding-right: 250px;
     margin-left: 20px;
-    font-size: 20px;
+}
+
+.form select {
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    margin-left: 20px;
+    font-size: 15px;
     background-color: white;
 }
 
-textarea{
+.form textarea{
     padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 100px;
+    padding-bottom: 50px;
+    padding-right: 250px;
     margin-left: 10px;
     height: 60px;
+    
+}   
+
+.form input[type=submit] {
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 20px;
+    background-color: cornflowerblue;
+    color: white;
 }
 
-
-table {
+.form table {
     font-size: 20px;
     padding-bottom: 30px;
     color: navy;
 }
 
-table a {
+.form table a {
      color: darkslategrey;
      font-size: 15px;
 }
+
+#show {
+    margin-left: 20px;
+}
+
+#show p{
+    color: navy;
+    font-size: 20px;
+    padding-top: 20px;
+
+}
+
+#show p strong{
+    color: darkred;
+    font-size: 20px;
+}
+
+#show p a{
+    color: black;
+}
+
+
+#all_events {
+    margin-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+#all_events table td {
+    padding-bottom: 30px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+
+} 
+
+#all_events #event_title {
+        padding-right: 100px;
+        color: navy;
+        font-weight: bold;
+}
+
+#all_events a {
+        padding-right: 50px;
+        color: darkred;
+} 
 

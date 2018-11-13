@@ -1,11 +1,13 @@
-<div id="tasks">
 
 <h1 id="date"><%= DateTime.now.to_date.strftime "%A, %B %d, %Y" %></h1>
 
+<div id="tasks">
+
 <h2>Incompleted Tasks</h2>
+<h3><%= link_to "New Task", new_task_path, id: "new_link", remote: true  %></h3>
+
 <div class="tasks" id="incomplete_tasks">
   <%= render @incomplete_tasks %>
-  <%= link_to "New Task", new_task_path, id: "new_link", remote: true  %>
 </div>
 
 <hr>

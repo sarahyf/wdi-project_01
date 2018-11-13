@@ -17,6 +17,7 @@
 
 body {
     margin: 0%;
+
 }
 
 nav {
@@ -53,3 +54,79 @@ a {
     pointer-events: inherit;
     width: auto;
 } 
+
+#title {
+    margin: 0%;
+    background-color: cornflowerblue;
+    text-align: center;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.form h1 {
+    margin: 0px;
+    margin-left: 0%;
+    padding: 0px;
+    text-align: center;
+    background-color: cornflowerblue;
+    height: 100px;
+    color: wi
+}
+
+.form div {
+    padding-bottom: 20px;
+}
+
+.form input[type=text] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 250px;
+    margin-left: 20px;
+}
+
+.form input[type=email] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 250px;
+    margin-left: 20px;
+}
+
+.form input[type=password] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 250px;
+    margin-left: 20px;
+}
+
+.form select {
+     padding-top: 10px;
+     padding-bottom: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.form textarea{
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-right: 250px;
+    margin-left: 10px;
+    height: 60px;
+    
+}   
+
+.form input[type=submit] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: cornflowerblue;
+    color: white;
+}

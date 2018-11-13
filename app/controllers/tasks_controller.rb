@@ -6,6 +6,10 @@ class TasksController < ApplicationController
     @complete_tasks = current_user.tasks.where(completed: true)
   end
 
+  # def show
+  #   @task = Task.find_by(id: params[:id])
+  # end
+
   def new
     @task = Task.new
   end

@@ -1,3 +1,10 @@
+<div id="events">
+    <h3><%= link_to "New Event", new_event_path %></h3>
+    <!--<h3><%= link_to "Show Calendar", user_path(current_user) %></h3>-->
+</div>
+
+<div id="all_events">
+
 <h2>Upcoming Events</h2>
 
 <table>
@@ -5,10 +12,10 @@
     <% @events.each do |event| %>
     <% if event.start_time > DateTime.now %>
       <tr>
-        <td><%= event.event_title %></td>
+        <td id="event_title"><%= event.event_title %></td>
         <td><%= link_to "Details", event %></td>
         <td><%= link_to "Edit", edit_event_path(event) %></td>
-        <td><%= link_to "Destroy", event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Destroy", event, method: :delete %></td>
       </tr>
       <% end %>
     <% end %>
@@ -22,12 +29,15 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.event_title %></td>
+        <td id="event_title"><%= event.event_title %></td>
         <td><%= link_to "Details", event %></td>
         <td><%= link_to "Edit", edit_event_path(event) %></td>
-        <td><%= link_to "Destroy", event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Destroy", event, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
+
+</div>
+
