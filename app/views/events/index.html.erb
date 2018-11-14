@@ -14,7 +14,7 @@
         <td id="event_title"><%= event.event_title %></td>
         <td><%= link_to "Details", event %></td>
         <td><%= link_to "Edit", edit_event_path(event) %></td>
-        <td><%= link_to "Destroy", event, method: :delete %></td>
+        <td><%= link_to "Delete", event, method: :delete %></td>
       </tr>
       <% end %>
     <% end %>
@@ -31,7 +31,7 @@
         <td id="event_title"><%= event.event_title %></td>
         <td><%= link_to "Details", event %></td>
         <td><%= link_to "Edit", edit_event_path(event) %></td>
-        <td><%= link_to "Destroy", event, method: :delete %></td>
+        <td><%= link_to "Delete", event, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
